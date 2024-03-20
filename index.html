@@ -89,67 +89,71 @@
       <button class="leftButton arrow disabled rounded-4 d-flex justify-content-center align-items-center">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
-      <div class="body-wrapper w-100 h-100 d-flex flex-column align-items-center">
-        <div class="cards d-flex justify-content-center align-items-center">
-          <div class="cards-wrapper d-flex flex-column align-items-center">
-            <div class="title w-100 d-flex align-items-center">
-              <div class="img-wrapper d-flex align-items-center justify-content-center">
-                <img src="./media/images/person.svg" alt="character-img" class="w-100 h-100 object-fit-contain" />
+      <div class="body-wrapper w-100 h-100 d-flex justify-content-center">
+        <img src="./media/images/tom.svg" alt="character1-img" class="character-img" />
+        <div class="body-items d-flex flex-column align-items-center">
+          <div class="cards d-flex justify-content-center align-items-center">
+            <div class="cards-wrapper d-flex flex-column align-items-center">
+              <div class="title w-100 d-flex align-items-center">
+                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                  <img src="./media/images/person.svg" alt="character-img" class="w-100 h-100 object-fit-contain" />
+                </div>
+                <span class="person-name">توم</span>
               </div>
-              <span class="person-name">توم</span>
+              <div class="cards-container w-100 d-flex flex-column align-items-center" droppable="true"
+                draggable="false" data-index="1"></div>
             </div>
-            <div class="cards-container w-100 d-flex flex-column align-items-center" droppable="true" draggable="false"
-              data-index="1"></div>
+            <div class="cards-wrapper d-flex flex-column align-items-center">
+              <div class="title w-100 d-flex align-items-center">
+                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                  <img src="./media/images/person.svg" alt="character-img" class="w-100 h-100 object-fit-contain" />
+                </div>
+                <span class="person-name">إيمي</span>
+              </div>
+              <div class="cards-container w-100 d-flex flex-column align-items-center" droppable="true"
+                draggable="false" data-index="2"></div>
+            </div>
           </div>
-          <div class="cards-wrapper d-flex flex-column align-items-center">
-            <div class="title w-100 d-flex align-items-center">
-              <div class="img-wrapper d-flex align-items-center justify-content-center">
-                <img src="./media/images/person.svg" alt="character-img" class="w-100 h-100 object-fit-contain" />
+          <div class="match-cards d-flex align-items-center justify-content-center flex-wrap">
+            <div class="match-card-wrapper d-flex justify-content-center align-items-center">
+              <div class="match-card d-flex align-items-center justify-content-center" data-index="2" draggable="true"
+                data-indx="1">
+                <p class="text m-0">أنا فتاة</p>
               </div>
-              <span class="person-name">إيمي</span>
             </div>
-            <div class="cards-container w-100 d-flex flex-column align-items-center" droppable="true" draggable="false"
-              data-index="2"></div>
+            <div class="match-card-wrapper d-flex justify-content-center align-items-center">
+              <div class="match-card d-flex align-items-center justify-content-center" data-index="1" draggable="true"
+                data-indx="4">
+                <p class="text m-0">أنا طويل</p>
+              </div>
+            </div>
+            <div class="match-card-wrapper d-flex justify-content-center align-items-center">
+              <div class="match-card d-flex align-items-center justify-content-center" data-index="1" draggable="true"
+                data-indx="2">
+                <p class="text m-0">أنا كبير</p>
+              </div>
+            </div>
+            <div class="match-card-wrapper d-flex justify-content-center align-items-center">
+              <div class="match-card d-flex align-items-center justify-content-center" data-index="2" draggable="true"
+                data-indx="5">
+                <p class="text m-0">أنا صغيرة</p>
+              </div>
+            </div>
+            <div class="match-card-wrapper d-flex justify-content-center align-items-center">
+              <div class="match-card d-flex align-items-center justify-content-center" data-index="2" draggable="true"
+                data-indx="3">
+                <p class="text m-0">أنا قصيرة</p>
+              </div>
+            </div>
+            <div class="match-card-wrapper d-flex justify-content-center align-items-center">
+              <div class="match-card d-flex align-items-center justify-content-center" data-index="1" draggable="true"
+                data-indx="6">
+                <p class="text m-0">أنا صبي</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="match-cards d-flex align-items-center justify-content-center flex-wrap">
-          <div class="match-card-wrapper d-flex justify-content-center align-items-center">
-            <div class="match-card d-flex align-items-center justify-content-center" data-index="2" draggable="true"
-              data-indx="1">
-              <p class="text m-0">أنا فتاة</p>
-            </div>
-          </div>
-          <div class="match-card-wrapper d-flex justify-content-center align-items-center">
-            <div class="match-card d-flex align-items-center justify-content-center" data-index="1" draggable="true"
-              data-indx="4">
-              <p class="text m-0">أنا طويل</p>
-            </div>
-          </div>
-          <div class="match-card-wrapper d-flex justify-content-center align-items-center">
-            <div class="match-card d-flex align-items-center justify-content-center" data-index="1" draggable="true"
-              data-indx="2">
-              <p class="text m-0">أنا كبير</p>
-            </div>
-          </div>
-          <div class="match-card-wrapper d-flex justify-content-center align-items-center">
-            <div class="match-card d-flex align-items-center justify-content-center" data-index="2" draggable="true"
-              data-indx="5">
-              <p class="text m-0">أنا صغيرة</p>
-            </div>
-          </div>
-          <div class="match-card-wrapper d-flex justify-content-center align-items-center">
-            <div class="match-card d-flex align-items-center justify-content-center" data-index="2" draggable="true"
-              data-indx="3">
-              <p class="text m-0">أنا قصيرة</p>
-            </div>
-          </div>
-          <div class="match-card-wrapper d-flex justify-content-center align-items-center">
-            <div class="match-card d-flex align-items-center justify-content-center" data-index="1" draggable="true"
-              data-indx="6">
-              <p class="text m-0">أنا صبي</p>
-            </div>
-          </div>
-        </div>
+        <img src="./media/images/emy.svg" alt="character2-img" class="character-img" />
       </div>
       <button class="rightButton arrow rounded-4 d-flex justify-content-center align-items-center">
         <i class="fa-solid fa-chevron-left"></i>

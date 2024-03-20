@@ -8,9 +8,7 @@ $gap-1: 2rem;
 $gap-2: 4vh;
 $gap-5: 1rem;
 $gap-6: 2vh;
-$width: 60%;
 $width-1: 100%;
-$width-2: 85%;
 %fixed-position {
   position: fixed;
   top: 50%;
@@ -368,10 +366,6 @@ $width-2: 85%;
   }
   .body {
     height: 83%;
-    visibility: hidden;
-    &.show {
-      visibility: visible;
-    }
     .arrow {
       width: fit-content;
       min-height: 12%;
@@ -403,175 +397,174 @@ $width-2: 85%;
           gap: $gap-5;
         }
       }
-      .cards {
-        width: $width-1;
-        min-height: calc((100% - $gap-6) * 0.7);
+      .character-img {
+        width: 12%;
+        height: 60%;
+        align-self: flex-end;
+        z-index: 1000;
+      }
+      .body-items {
         gap: $gap-6;
-        position: relative;
+        flex-grow: 1;
+        visibility: hidden;
+        &.show {
+          visibility: visible;
+        }
         @include mediaQuery($medScreen_min_width) {
           & {
-            height: calc((100% - $gap-5) * 0.7);
             gap: $gap-5;
           }
         }
-        @include mediaQuery($largeScreen_min_width) {
-          & {
-            width: $width-2;
-          }
-        }
-        @include mediaQuery($XXlargeScreen_min_width) {
-          & {
-            width: $width;
-          }
-        }
-        .cards-wrapper {
-          min-height: 90%;
-          max-height: 100%;
-          width: calc((100% - $gap-6) * 0.5);
-          padding: 3vh;
-          gap: 3vh;
-          border-radius: 1rem;
-          background-color: $white-1;
-          transform: translateY(100vh);
-          visibility: hidden;
+        .cards {
+          width: $width-1;
+          min-height: calc((100% - $gap-6) * 0.7);
+          gap: $gap-6;
+          position: relative;
           @include mediaQuery($medScreen_min_width) {
             & {
-              width: calc((100% - $gap-5) * 0.5);
-              padding: 1.5rem;
-              gap: 1.5rem;
+              height: calc((100% - $gap-5) * 0.7);
+              gap: $gap-5;
             }
           }
-          &.show {
-            animation-name: showWrapper;
-            animation-duration: 0.4s;
-            animation-timing-function: ease;
-            animation-iteration-count: 1;
-          }
-          .title {
-            gap: 0.75rem;
-            align-self: flex-start;
-            .img-wrapper {
-              width: 6vh;
-              aspect-ratio: 1;
-              padding: 1vh 1vh 0 1vh;
-              border-radius: 50%;
-              overflow: hidden;
-              @include mediaQuery($medScreen_min_width) {
-                & {
-                  width: 16%;
-                  padding: 0.5rem 0.5rem 0 0.5rem;
-                }
-              }
-            }
-            .person-name {
-              font-size: 3vh;
-              font-family: Asmaa-Font;
-              text-transform: capitalize;
-              @include mediaQuery($medScreen_min_width) {
-                & {
-                  font-size: 1.5rem;
-                }
-              }
-            }
-          }
-          .cards-container {
-            gap: $gap-6;
-            flex-grow: 1;
+          .cards-wrapper {
+            min-height: 90%;
+            max-height: 100%;
+            width: calc((100% - $gap-6) * 0.5);
+            padding: 3vh;
+            gap: 3vh;
+            border-radius: 1rem;
+            background-color: $white-1;
+            transform: translateY(100vh);
+            visibility: hidden;
             @include mediaQuery($medScreen_min_width) {
               & {
-                gap: $gap-5;
+                width: calc((100% - $gap-5) * 0.5);
+                padding: 1.5rem;
+                gap: 1.5rem;
               }
             }
-            .card-item {
-              flex: 0 1;
+            &.show {
+              animation-name: showWrapper;
+              animation-duration: 0.4s;
+              animation-timing-function: ease;
+              animation-iteration-count: 1;
+            }
+            .title {
+              gap: 0.75rem;
+              align-self: flex-start;
+              .img-wrapper {
+                width: 6vh;
+                aspect-ratio: 1;
+                padding: 1vh 1vh 0 1vh;
+                border-radius: 50%;
+                overflow: hidden;
+                @include mediaQuery($medScreen_min_width) {
+                  & {
+                    width: 16%;
+                    padding: 0.5rem 0.5rem 0 0.5rem;
+                  }
+                }
+              }
+              .person-name {
+                font-size: 3vh;
+                font-family: Asmaa-Font;
+                text-transform: capitalize;
+                @include mediaQuery($medScreen_min_width) {
+                  & {
+                    font-size: 1.5rem;
+                  }
+                }
+              }
+            }
+            .cards-container {
+              gap: $gap-6;
+              flex-grow: 1;
+              @include mediaQuery($medScreen_min_width) {
+                & {
+                  gap: $gap-5;
+                }
+              }
+              .card-item {
+                flex: 0 1;
+                @extend %text;
+                visibility: hidden;
+                &.show {
+                  animation-name: showCards;
+                  animation-duration: 0.4s;
+                  animation-timing-function: ease;
+                  animation-iteration-count: 1;
+                }
+              }
+            }
+            &:nth-of-type(1) {
+              align-self: flex-start;
+              .title {
+                .img-wrapper {
+                  background-color: $blue-7;
+                }
+              }
+              .cards-container {
+                .card-item {
+                  background-color: $blue-6;
+                }
+              }
+            }
+            &:nth-of-type(2) {
+              .title {
+                .img-wrapper {
+                  background-color: $pink-4;
+                }
+              }
+              .cards-container {
+                .card-item {
+                  background-color: $pink-3;
+                }
+              }
+            }
+          }
+        }
+        .match-cards {
+          width: $width-1;
+          height: calc((100% - $gap-6) * 0.3);
+          gap: $gap-6;
+          @include mediaQuery($medScreen_min_width) {
+            & {
+              height: calc((100% - $gap-5) * 0.3);
+              gap: $gap-5;
+            }
+          }
+          .match-card-wrapper {
+            width: calc((100% - (2 * $gap-6)) / 3);
+            align-self: stretch;
+            @include mediaQuery($medScreen_min_width) {
+              & {
+                width: calc((100% - $gap-5) * 0.5);
+              }
+            }
+            .match-card {
+              height: 100%;
+              background-color: $white-1;
               @extend %text;
+              display: inline-block;
+              box-shadow: 0 0.25rem 0.25rem $shadow-1;
               visibility: hidden;
+              cursor: pointer;
+
               &.show {
                 animation-name: showCards;
                 animation-duration: 0.4s;
                 animation-timing-function: ease;
                 animation-iteration-count: 1;
               }
-            }
-          }
-          &:nth-of-type(1) {
-            align-self: flex-start;
-            .title {
-              .img-wrapper {
-                background-color: $blue-7;
+              &.vibrate {
+                animation-name: vibrate;
+                animation-duration: 0.5s;
+                animation-iteration-count: 1;
               }
-            }
-            .cards-container {
-              .card-item {
-                background-color: $blue-6;
-              }
-            }
-          }
-          &:nth-of-type(2) {
-            .title {
-              .img-wrapper {
-                background-color: $pink-4;
-              }
-            }
-            .cards-container {
-              .card-item {
-                background-color: $pink-3;
-              }
-            }
-          }
-        }
-      }
-      .match-cards {
-        width: $width-1;
-        height: calc((100% - $gap-6) * 0.3);
-        gap: $gap-6;
-        @include mediaQuery($medScreen_min_width) {
-          & {
-            height: calc((100% - $gap-5) * 0.3);
-            gap: $gap-5;
-          }
-        }
-        @include mediaQuery($largeScreen_min_width) {
-          & {
-            width: $width-2;
-          }
-        }
-        @include mediaQuery($XXlargeScreen_min_width) {
-          & {
-            width: $width;
-          }
-        }
-        .match-card-wrapper {
-          width: calc((100% - (2 * $gap-6)) / 3);
-          align-self: stretch;
-          @include mediaQuery($medScreen_min_width) {
-            & {
-              width: calc((100% - $gap-5) * 0.5);
-            }
-          }
-          .match-card {
-            height: 100%;
-            background-color: $white-1;
-            @extend %text;
-            display: inline-block;
-            box-shadow: 0 0.25rem 0.25rem $shadow-1;
-            visibility: hidden;
-            cursor: pointer;
-
-            &.show {
-              animation-name: showCards;
-              animation-duration: 0.4s;
-              animation-timing-function: ease;
-              animation-iteration-count: 1;
-            }
-            &.vibrate {
-              animation-name: vibrate;
-              animation-duration: 0.5s;
-              animation-iteration-count: 1;
-            }
-            .text {
-              &::first-letter {
-                text-transform: capitalize;
+              .text {
+                &::first-letter {
+                  text-transform: capitalize;
+                }
               }
             }
           }
