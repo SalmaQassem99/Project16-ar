@@ -36,7 +36,7 @@ $width-2: 85%;
   padding: 1.875vh;
   color: $black-1;
   font-size: 3vh;
-  font-family: MochiyPopPOne-Regular;
+  font-family: NotoKufiArabic-SemiBold;
   text-align: center;
   border-radius: 0.75rem;
   &::first-letter {
@@ -139,7 +139,7 @@ $width-2: 85%;
   &.pause {
     height: 100%;
     position: absolute;
-    left: 0;
+    right: 0;
     top: calc(100vh - (2 * $padding));
     transform: translateY(-100%);
     transition: 0.5s;
@@ -182,11 +182,11 @@ $width-2: 85%;
         height: 100%;
         width: 15rem;
         padding: 0 0.75rem;
-        margin-right: -2rem;
+        margin-left: -2rem;
         position: relative;
         z-index: 10;
         background-color: $white-1;
-        border-radius: 0.625rem 0 0 0.625rem;
+        border-radius: 0 0.625rem 0.625rem 0;
         box-shadow: 0 0.25rem 0.25rem 0 $shadow-1;
 
         &::before {
@@ -194,7 +194,7 @@ $width-2: 85%;
           position: absolute;
           width: var(--width);
           height: 100%;
-          right: 0;
+          left: 0;
           top: 0;
           z-index: 9;
           background-color: $green-1;
@@ -304,9 +304,8 @@ $width-2: 85%;
             .sign {
               color: $pink-2;
               font-size: 14vh;
-              //font-family: DG-3asomy-Regular;
               filter: drop-shadow(0 0.5rem 0.25rem $shadow-2);
-              transform: rotate(21.11deg) translate(-15%, -8%);
+              transform: rotate(-21.11deg) translate(-15%, -8%);
             }
           }
           .second-line {
@@ -465,12 +464,12 @@ $width-2: 85%;
               }
             }
             .person-name {
-              font-size: 2vh;
-              font-family: MochiyPopPOne-Regular;
+              font-size: 3vh;
+              font-family: Asmaa-Font;
               text-transform: capitalize;
               @include mediaQuery($medScreen_min_width) {
                 & {
-                  font-size: 1rem;
+                  font-size: 1.5rem;
                 }
               }
             }
@@ -712,6 +711,9 @@ $width-2: 85%;
         margin: 0 auto;
         position: relative;
         top: -3vh;
+        img {
+          transform: scaleX(-1);
+        }
       }
       .content-card {
         height: 60%;
@@ -734,8 +736,9 @@ $width-2: 85%;
             color: $black-1;
             font-size: 140%;
             text-transform: capitalize;
-            font-family: LilitaOne-Regular;
+            font-family: DG-3asomy-Regular;
             .content {
+              order: 2;
               .text {
                 position: relative;
 
@@ -758,6 +761,7 @@ $width-2: 85%;
             .score-icon-wrapper {
               width: 4rem;
               height: 80%;
+              order: 1;
             }
           }
         }

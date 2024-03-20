@@ -64,6 +64,10 @@ a {
   font-family: DG-3asomy-Regular;
   src: url("../fonts/DG-3asomy-Regular.ttf");
 }
+@font-face {
+  font-family: Asmaa-Font;
+  src: url("../fonts/Asmaa-Font.otf");
+}
 .success-wrapper, .popup, .game .cardContainer, .overlay, .pop-overlay {
   position: fixed;
   top: 50%;
@@ -91,7 +95,7 @@ a {
   padding: 1.875vh;
   color: #000;
   font-size: 3vh;
-  font-family: MochiyPopPOne-Regular;
+  font-family: NotoKufiArabic-SemiBold;
   text-align: center;
   border-radius: 0.75rem;
 }
@@ -192,7 +196,7 @@ a {
 .icon.pause {
   height: 100%;
   position: absolute;
-  left: 0;
+  right: 0;
   top: calc(100vh - 3rem);
   transform: translateY(-100%);
   transition: 0.5s;
@@ -235,11 +239,11 @@ a {
   height: 100%;
   width: 15rem;
   padding: 0 0.75rem;
-  margin-right: -2rem;
+  margin-left: -2rem;
   position: relative;
   z-index: 10;
   background-color: #fff;
-  border-radius: 0.625rem 0 0 0.625rem;
+  border-radius: 0 0.625rem 0.625rem 0;
   box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
 }
 .game .head .scoreWrapper .scoreItem::before {
@@ -247,7 +251,7 @@ a {
   position: absolute;
   width: var(--width);
   height: 100%;
-  right: 0;
+  left: 0;
   top: 0;
   z-index: 9;
   background-color: rgb(18, 171, 15);
@@ -356,7 +360,7 @@ a {
   color: #fa7fb2;
   font-size: 14vh;
   filter: drop-shadow(0 0.5rem 0.25rem rgba(0, 0, 0, 0.6));
-  transform: rotate(21.11deg) translate(-15%, -8%);
+  transform: rotate(-21.11deg) translate(-15%, -8%);
 }
 .game .cardContainer .card-wrapper .card .title .second-line {
   margin: 0 0 2.75vh 0;
@@ -506,13 +510,13 @@ a {
   }
 }
 .game .body .body-wrapper .cards .cards-wrapper .title .person-name {
-  font-size: 2vh;
-  font-family: MochiyPopPOne-Regular;
+  font-size: 3vh;
+  font-family: Asmaa-Font;
   text-transform: capitalize;
 }
 @media (min-width: 768px) {
   .game .body .body-wrapper .cards .cards-wrapper .title .person-name {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 .game .body .body-wrapper .cards .cards-wrapper .cards-container {
@@ -720,6 +724,9 @@ a {
   position: relative;
   top: -3vh;
 }
+.success-wrapper .success-card .card-wrapper .img-wrapper img {
+  transform: scaleX(-1);
+}
 .success-wrapper .success-card .card-wrapper .content-card {
   height: 60%;
 }
@@ -734,7 +741,10 @@ a {
   color: #000;
   font-size: 140%;
   text-transform: capitalize;
-  font-family: LilitaOne-Regular;
+  font-family: DG-3asomy-Regular;
+}
+.success-wrapper .success-card .card-wrapper .content-card .outer-card .text-card .content {
+  order: 2;
 }
 .success-wrapper .success-card .card-wrapper .content-card .outer-card .text-card .content .text {
   position: relative;
@@ -755,6 +765,7 @@ a {
 .success-wrapper .success-card .card-wrapper .content-card .outer-card .text-card .score-icon-wrapper {
   width: 4rem;
   height: 80%;
+  order: 1;
 }
 .success-wrapper .success-card .card-wrapper .content-card .arrows {
   padding: 0.75rem 1rem 0.5rem;
