@@ -141,6 +141,7 @@ $width-1: 100%;
     top: calc(100vh - (2 * $padding));
     transform: translateY(-100%);
     transition: 0.5s;
+    visibility: hidden;
   }
 }
 .game {
@@ -275,7 +276,7 @@ $width-1: 100%;
             }
           }
           .first-line {
-            gap: 15%;
+            gap: 8%;
             line-height: 0.5;
             .word-item {
               font-size: 8vh;
@@ -376,7 +377,7 @@ $width-1: 100%;
       box-shadow: 0 0.25rem 0.25rem 0 $shadow-1;
       transition: 0.5s;
       z-index: 100;
-
+      visibility: hidden;
       .fa-solid {
         filter: drop-shadow(0 0.25rem 0.25rem $shadow-1);
       }

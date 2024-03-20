@@ -200,6 +200,7 @@ a {
   top: calc(100vh - 3rem);
   transform: translateY(-100%);
   transition: 0.5s;
+  visibility: hidden;
 }
 
 .game {
@@ -332,7 +333,7 @@ a {
   fill: #ace5fe;
 }
 .game .cardContainer .card-wrapper .card .title .first-line {
-  gap: 15%;
+  gap: 8%;
   line-height: 0.5;
 }
 .game .cardContainer .card-wrapper .card .title .first-line .word-item {
@@ -423,6 +424,7 @@ a {
   box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
   transition: 0.5s;
   z-index: 100;
+  visibility: hidden;
 }
 .game .body .arrow .fa-solid {
   filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));

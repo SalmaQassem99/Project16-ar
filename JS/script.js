@@ -71,6 +71,10 @@ playButton.addEventListener("click", () => {
     scoreWrapper.style.visibility = "visible";
     score.textContent = `0/${textItems.length}`;
     body.classList.add("show");
+    arrows.forEach((arrow) => {
+      arrow.style.visibility = "visible";
+    });
+    pauseButton.style.visibility = "visible";
     animateNext(animationCounter);
   });
 });
@@ -111,12 +115,7 @@ cardsContainer.forEach((cardItem) => {
         .querySelector(":root")
         .style.setProperty("--width", `${(100 / textItems.length) * counter}%`);
       const newItem = document.createElement("div");
-      newItem.classList.add(
-        "card-item",
-        "d-flex",
-        "align-items-center",
-        "justify-content-center"
-      );
+      newItem.classList.add("card-item");
       newItem.textContent = textContent;
       cardItem.appendChild(newItem);
       newItem.style.visibility = "visible";
