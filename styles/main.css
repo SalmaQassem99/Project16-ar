@@ -148,7 +148,7 @@ a {
   max-height: 3rem;
   aspect-ratio: 1;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   background: linear-gradient(to bottom, #febf47 2%, #f0b700);
   color: #fff;
   font-size: 1.25rem;
@@ -202,6 +202,9 @@ a {
   transition: 0.5s;
   visibility: hidden;
 }
+.icon.pause .fa-solid.hide {
+  display: none;
+}
 
 .game {
   width: 100vw;
@@ -209,13 +212,15 @@ a {
   padding: 1.5rem;
   position: relative;
   overflow-y: auto;
-  visibility: hidden;
   background-size: cover;
   background-position: 50% 100%;
+  visibility: hidden;
+  transform-origin: right top;
 }
-.game.hide {
-  animation-name: scaleDown;
-  animation-duration: 0.5s;
+.game.hideGame {
+  animation-name: hideGame;
+  animation-timing-function: linear;
+  animation-duration: 1s;
   animation-iteration-count: 1;
 }
 .game .head {
@@ -795,6 +800,14 @@ a {
   }
   100% {
     transform: translateZ(-1px) scaleX(1);
+  }
+}
+@keyframes hideGame {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 @keyframes scaleDown {
